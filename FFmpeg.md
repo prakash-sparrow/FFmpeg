@@ -1,7 +1,7 @@
 # FFmpeg Multimedai Tool
 
 #### Real life Examples :
- Commands  | Explanation                                                          |
+ No | Explanation                                                         |
 |---|---------------------------------------------------------------------|
 | 1 |  Ffmpeg basics
 | 2 | 
