@@ -17,7 +17,7 @@
 ### 2 . Merging All videos in One Video file
 
 
-`(for %i in (*.mp4) do @echo file '%i')> mylist.txt`
+```(for %i in (*.mp4) do @echo file '%i')> mylist.txt```
 
 This line prepare the all videos names in one file
 
