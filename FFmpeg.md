@@ -4,7 +4,7 @@
  No | Explanation                                                         |
 |---|---------------------------------------------------------------------|
 | 1 | [**Converting bunch of mp4 videos in same folder using ffmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#1-converting-bunch-of-mp4-videos-in-same-folder-using-ffmpeg)
-| 2 | [**Merging All videos in One Video file**]()
+| 2 | [**Merging All videos in One Video file**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#2--merging-all-videos-in-one-video-file)
 
 ---
 
@@ -17,7 +17,9 @@
 ### 2 . Merging All videos in One Video file
 
 
-```(for %i in (*.mp4) do @echo file '%i')> mylist.txt```
+```
+(for %i in (*.mp4) do @echo file '%i')> mylist.txt
+```
 
 This line prepare the all videos names in one file
 
