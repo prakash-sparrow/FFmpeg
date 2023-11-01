@@ -8,23 +8,26 @@
 
 ---
 
-### 1. Converting bunch of mp4 videos in same folder using ffmpeg
+## 1. Converting bunch of mp4 Videos in same folder using FFmpeg
 
-`for /r %a in (*.mp4) do ffmpeg -i "%a" -c:v libx265 -crf 30 "%a_converted_x265.mp4"`
-
----
-
-### 2 . Merging All videos in One Video file
-
-
+&nbsp;<br>
+Recurservely Convert all videos in current directory
+```bash
+for /r %a in (*.mp4) do ffmpeg -i "%a" -c:v libx265 -crf 30 "%a_converted_x265.mp4"
 ```
+&nbsp;<br>
+
+
+## 2 . Merging All videos in One Video file
+
+&nbsp;<br>
+This line prepare the all videos names in one file
+```bash
 (for %i in (*.mp4) do @echo file '%i')> mylist.txt
 ```
-
-This line prepare the all videos names in one file
-
-`ffmpeg -f concat -safe 0 -i "mylist.txt" -c copy ouput.mp4`
-
 It start to convert the all video in one video file using the above text file
+```bash
+ffmpeg -f concat -safe 0 -i "mylist.txt" -c copy ouput.mp4
+```
 
----
+
