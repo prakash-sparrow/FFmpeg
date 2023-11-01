@@ -16,10 +16,13 @@
 
 ### 2 . Merging All videos in One Video file
 
+
 `(for %i in (*.mp4) do @echo file '%i')> mylist.txt`
+
 This line prepare the all videos names in one file
 
 `ffmpeg -f concat -safe 0 -i "mylist.txt" -c copy ouput.mp4`
+
 It start to convert the all video in one video file using the above text file
 
 ---
