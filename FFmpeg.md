@@ -5,6 +5,7 @@
 |---|---------------------------------------------------------------------|
 | 1 | [**Converting bunch of mp4 videos in same folder using ffmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#1-converting-bunch-of-mp4-videos-in-same-folder-using-ffmpeg)
 | 2 | [**Merging All videos in One Video file**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#2--merging-all-videos-in-one-video-file)
+| 3 | [**Creating a Beep sound with FFmpeg**]()
 
 ---
 
@@ -29,5 +30,18 @@ It start to convert the all video in one video file using the above text file
 ```bash
 ffmpeg -f concat -safe 0 -i "mylist.txt" -c copy ouput.mp4
 ```
+&nbsp;<br>
+
+
+## 3. Creating a Beep sound with FFmpeg
+
+&nbsp;<br>
+This command will create a beep sound duration of 4 seconds
+```bash
+ffmpeg -f lavfi -i "sine=frequency=1000:sample_rate=48000:duration=4" -af apad -t 4 beep-sound.wav
+```
+&nbsp;<br>
+
+
 
 
