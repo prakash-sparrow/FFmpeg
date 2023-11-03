@@ -6,6 +6,7 @@
 | 1 | [**Converting bunch of mp4 videos in same folder using ffmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#1-converting-bunch-of-mp4-videos-in-same-folder-using-ffmpeg)
 | 2 | [**Merging All videos in One Video file**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#2--merging-all-videos-in-one-video-file)
 | 3 | [**Creating a Beep sound with FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#3-creating-a-beep-sound-with-ffmpeg)
+| 4 | [**Color Image to Black and White using FFmpeg**]()
 
 ---
 
@@ -42,6 +43,11 @@ ffmpeg -f lavfi -i "sine=frequency=1000:sample_rate=48000:duration=4" -af apad -
 ```
 &nbsp;<br>
 
-
+## 4. Color Image to Black and White using FFmpeg
+&nbsp;<br>
+Images to Gray or black and white
+```bash
+ffmpeg -i input.png -pix_fmt gray output.png
+```
 
 
