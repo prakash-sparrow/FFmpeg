@@ -7,7 +7,7 @@
 | 2 | [**Merging All videos in One Video file**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#2--merging-all-videos-in-one-video-file)
 | 3 | [**Creating a Beep sound with FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#3-creating-a-beep-sound-with-ffmpeg)
 | 4 | [**Color Image to Black and White using FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#4-color-image-to-black-and-white-using-ffmpeg)
-| 5 | [**Calculating the Total Duration of Video files**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#5-calculating-the-total-duration-of-video-file)
+| 5 | [**Calculating the Total Duration of Video files**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#5-calculating-the-total-duration-of-video-files)
 
 ---
 
