@@ -52,8 +52,10 @@ ffmpeg -i input.png -pix_fmt gray output.png
 ```
 &nbsp;<br>
 
-## 5. Calculating the Total Duration of Video file
+## 5. Calculating the Total Duration of Video Files
 &nbsp;<br>
+
+### LINUX
 This command will calculate the total duration of video files with extensions mp4, mkv, and webm in the current directory and display the result in hours, minutes, and seconds
 ```bash
 for video_file in *.{mp4,mkv,webm}; do ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$video_file"; done | cut -d "." -f1 | awk '{s+=$1} END {printf "%d hours %d minutes %d seconds\n", s/3600, (s%3600)/60, s%60}'
