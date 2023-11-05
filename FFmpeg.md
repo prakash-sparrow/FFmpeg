@@ -7,6 +7,7 @@
 | 2 | [**Merging All videos in One Video file**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#2--merging-all-videos-in-one-video-file)
 | 3 | [**Creating a Beep sound with FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#3-creating-a-beep-sound-with-ffmpeg)
 | 4 | [**Color Image to Black and White using FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#4-color-image-to-black-and-white-using-ffmpeg)
+| 5 | [**Calculating the Total Duration of Video files**]
 
 ---
 
@@ -49,5 +50,14 @@ Images to Gray or black and white
 ```bash
 ffmpeg -i input.png -pix_fmt gray output.png
 ```
+&nbsp;<br>
+
+## 5. Calculating the Total Duration of Video file
+&nbsp;<br>
+This command will calculate the total duration of video files with extensions mp4, mkv, and webm in the current directory and display the result in hours, minutes, and seconds
+```bash
+for video_file in *.{mp4,mkv,webm}; do ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$video_file"; done | cut -d "." -f1 | awk '{s+=$1} END {printf "%d hours %d minutes %d seconds\n", s/3600, (s%3600)/60, s%60}'
+```
+&nbsp;<br>
 
 
