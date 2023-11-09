@@ -1,6 +1,3 @@
-# Ffmpeg
-FFmpeg is multimedia framework for encoding and decoding the audio and video data
-
 # FFmpeg Multimedai Tool
 
 #### Real life Examples :
@@ -10,6 +7,8 @@ FFmpeg is multimedia framework for encoding and decoding the audio and video dat
 | 2 | [**Merging All videos in One Video file**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#2--merging-all-videos-in-one-video-file)
 | 3 | [**Creating a Beep sound with FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#3-creating-a-beep-sound-with-ffmpeg)
 | 4 | [**Color Image to Black and White using FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#4-color-image-to-black-and-white-using-ffmpeg)
+| 5 | [**Calculating the Total Duration of Video files**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#5-calculating-the-total-duration-of-video-files)
+| 6 | [**Adding Burned Subtitles to Videos using FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#6-adding-burned-subtitles-to-videos-using-ffmpeg)
 
 ---
 
@@ -52,5 +51,25 @@ Images to Gray or black and white
 ```bash
 ffmpeg -i input.png -pix_fmt gray output.png
 ```
+&nbsp;<br>
+
+## 5. Calculating the Total Duration of Video Files
+&nbsp;<br>
+
+### LINUX
+This command will calculate the total duration of video files with extensions mp4, mkv, and webm in the current directory and display the result in hours, minutes, and seconds
+```bash
+for video_file in *.{mp4,mkv,webm,m4v,ts}; do ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$video_file"; done | cut -d "." -f1 | awk '{s+=$1} END {printf "%d hours %d minutes %d seconds\n", s/3600, (s%3600)/60, s%60}'
+```
+&nbsp;<br>
+
+
+## 6. Adding Burned Subtitles to Videos using FFmpeg
+&nbsp;<br>
+This command burn the subtitles with the video perfectly
+```bash
+ffmpeg -i input.mp4 -vf "subtitles=subtitle.srt:force_style='OutlineColour=&H80000000,BorderStyle=4,BackColour=&H80000000,Outline=0,Shadow=0,MarginV=10,Fontname=Arial,Fontsize=14,Alignment=2'" video_destination.mp4
+```
+&nbsp;<br>
 
 
