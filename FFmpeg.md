@@ -64,3 +64,12 @@ for video_file in *.{mp4,mkv,webm,m4v,ts}; do ffprobe -v error -show_entries for
 &nbsp;<br>
 
 
+## 6. Adding Burned Subtitles to Videos using FFmpeg
+&nbsp;<br>
+This command burn the subtitles with the video perfectly
+```bash
+ffmpeg -i input.mp4 -vf "subtitles=subtitle.srt:force_style='OutlineColour=&H80000000,BorderStyle=4,BackColour=&H80000000,Outline=0,Shadow=0,MarginV=10,Fontname=Arial,Fontsize=14,Alignment=2'" video_destination.mp4
+```
+&nbsp;<br>
+
+
