@@ -8,6 +8,7 @@
 | 3 | [**Creating a Beep sound with FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#3-creating-a-beep-sound-with-ffmpeg)
 | 4 | [**Color Image to Black and White using FFmpeg**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#4-color-image-to-black-and-white-using-ffmpeg)
 | 5 | [**Calculating the Total Duration of Video files**](https://github.com/prakash-sparrow/FFmpeg/blob/main/FFmpeg.md#5-calculating-the-total-duration-of-video-files)
+| 6 | [**Adding Burned Subtitles to Videos using FFmpeg**]()
 
 ---
 
